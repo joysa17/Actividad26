@@ -5,10 +5,11 @@
 
       <h1> Completados </h1>   
       <% @todo.each do |todo| %>
-        <% if todo.completed == false %>
+        <% if todo.completed == true %>
 	         <div class="well">
 	             <%= todo.description %>
-	             
+	             <br>
+	             <strong><%= todo.completed %></strong>
 	        </div>
      	 <% end %>
      	<% end %>
@@ -17,9 +18,11 @@
 
       <h1> No Completados </h1>   
       <% @todo.each do |todo| %>
-        <% if todo.completed == true %>
+        <% if todo.completed == false %>
 	         <div class="well">
 	             <%= todo.description %>
+	             <br>
+	             <strong><%= todo.completed %></strong>
 	             <br> 
 	         </div>
      	 <% end %>
