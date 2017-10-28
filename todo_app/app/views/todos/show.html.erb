@@ -1,0 +1,14 @@
+<h1>Lista</h1>
+
+
+<h1> <%= "ToDo: #{@todo.id}" %> </h1>
+
+<div class="container">
+
+<h4> <%= "Descripción ToDo: #{@todo.description}" %> </h2>
+
+<h4> <%= "Estado: #{@status}" %> </h2>
+
+<h4> Creado: <%= time_ago_in_words @todo.created_at %> </h3>
+
+</div>
