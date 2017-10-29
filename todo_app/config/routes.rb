@@ -6,7 +6,7 @@ get 'todos/new'
 post 'todos', to: 'todos#create'
 get 'todos/:id', to: 'todos#show', as: 'show' 
 get '/todos/:id/edit', to: 'todos#edit', as: 'edit' 
-patch '/todos/:id', to: 'todos#update', as: 'update'
+patch 'todos/:id', to: 'todos#update', as: :update
 delete 'todos/:id/', to:'todos#destroy', as: 'delete'
 get 'todo/list', to: 'todos#list', as: 'list'
 end
