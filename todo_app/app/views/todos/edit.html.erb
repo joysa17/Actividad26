@@ -1,6 +1,6 @@
  <h1>Lista</h1>  
 
-<%= form_with model: @todo, url: edit_path, local: true do |f| %>
+<%= form_with model: @todo, url: update_path, local: true do |f| %>
 
   <div>
     <%= f.label :descrición %><br>
@@ -12,6 +12,7 @@
   </div>
   <div>
     <%= f.submit 'Enviar' %>
+    <button type="button"><%= link_to 'Back', todos_path %></button>
   
   </div>
 <% end %>

@@ -3,14 +3,15 @@
 
 <h1> <%= "ToDo: #{@todo.id}" %> </h1>
 
-<div class="container">
+	<div class="container">
 
-<h4> <%= "Descripción: #{@todo.description}" %> </h2>
+		<h4> <%= "Descripción: #{@todo.description}" %> </h2>
 
-<h4> <%= "Estado: #{@todo.completed}" %> </h2>
+		<h4> <%= "Estado: #{@todo.completed}" %> </h2>
 
-<h4> Creado hace: <%= time_ago_in_words @todo.created_at %> </h3>
- 
-<h4> Actualizado a las: <%=@todo.updated_at %> </h4>
+		<h4> Creado hace: <%= time_ago_in_words @todo.created_at %> </h3>
+		 
+		<h4> Actualizado a las: <%=@todo.updated_at %> </h4>
 
-</div>
+	</div>
+	 <button type="button"><%= link_to 'Back', todos_path %></button>

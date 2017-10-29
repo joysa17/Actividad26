@@ -3,7 +3,8 @@
 <br>
 <br>
 <br>
-<%= link_to 'Crear ToDo', todos_new_path%>
+<button type="button" class="btn btn-default"><%= link_to 'Crear ToDo', todos_new_path%></button>
+
 <br>
 <br>
 <br>
@@ -11,8 +12,9 @@
   <div class="well" >
     <p> <strong>Descripción:</strong> <%= todo.description %></p>
     <p> <strong>Completado?:</strong> <%= todo.completed %> </p>
-      <%= link_to 'Editar', edit_path(todo.id) %>  
-      <%= link_to 'Borrar', delete_path(todo.id), method: :delete %>  
-     <%= link_to 'Show', show_path(todo.id) %>  
+     <button type="button" class="btn btn-default"><%= link_to 'Editar', edit_path(todo.id) %></button>
+     <button type="button" class="btn btn-default"><%= link_to 'Borrar', delete_path(todo.id), method: :delete %>  </button>   
+     <button type="button" class="btn btn-default"><%= link_to 'Show', show_path(todo.id) %>  </button> 
+     
   </div>
 <% end %>
